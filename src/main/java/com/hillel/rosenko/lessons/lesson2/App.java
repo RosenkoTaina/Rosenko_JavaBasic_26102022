@@ -41,9 +41,5 @@ public class App {
     }
 }
 
-
-
-
-
 //        a°b'c" = (a + b/60 + c/3600)°
 //        http://www.calculatorlakhm.com/index.php?name=Coordinates
