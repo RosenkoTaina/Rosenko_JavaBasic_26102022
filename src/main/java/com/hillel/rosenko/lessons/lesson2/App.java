@@ -3,6 +3,7 @@ package com.hillel.rosenko.lessons.lesson2;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
+//
 
         double x;
         double y;
