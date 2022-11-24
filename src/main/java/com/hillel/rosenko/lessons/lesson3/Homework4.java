@@ -1,6 +1,6 @@
 package com.hillel.rosenko.lessons.lesson3;
 
-public class NewApp {
+public class Homework4 {
     public static void main(String[] args) {
 
         double L;
