@@ -1,15 +1,23 @@
 package com.hillel.rosenko.lessons.lesson3;
 
+import java.lang.Math;
+import java.util.Scanner;
+
 public class Homework4 {
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
         double L;
         double W;
         double H;
+        System.out.println("Задайте довжину");
+        L = input.nextDouble();
+        System.out.println("Задайте ширину");
+        W = input.nextDouble();
+        System.out.println("Задайте висоту");
+        H = input.nextDouble();
+        input.close();
 
-        L = 6;
-        W = 6;
-        H = 7;
+        System.out.println("Розрахунок:");
 
         // об'єм V=L*W*H
         double Volume;
@@ -40,10 +48,8 @@ public class Homework4 {
         double result = V1+V2+V3;
         double Diagonal = Math.sqrt(result);
 
-        System.out.printf("Просторова діагональ = " + Diagonal);
 
-
-
+        System.out.printf("Просторова діагональ = " + Math.round(Diagonal));
 
 
     }
