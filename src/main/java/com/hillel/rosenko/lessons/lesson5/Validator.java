@@ -7,64 +7,24 @@ public class Validator {
     private static final Scanner sc = new Scanner(System.in);
 
     public static int getInt(String prompt) {
-        int result;
-        for (; ; ) {
-            System.out.print(prompt);
-            while (sc.hasNext()) {
-                if (!sc.hasNextInt()) {
-                    System.out.print("You enter not valid number");
-                    sc.next();
-                } else if ((sc.nextInt() < 0)) {
-                    System.out.println("Please enter a positive number");
-                    sc.next();
+        System.out.print(prompt);
+        int userData;
+        while (true) {
+            if (sc.hasNextInt()) {
+                userData = sc.nextInt();
+                if (userData >= 0 && userData <= 5) {
+                    break;
                 } else {
-                    result = sc.nextInt();
-                    sc.nextLine();
-                    return result;
+                    System.out.print("Enter number from 1 to 5");
                 }
-            }
-
+            }else {
+                System.out.print("You enter not valid number");
+                }
+            sc.nextLine();
         }
+
+        return userData;
     }
 }
 
-
-//
-//            if (sc.hasNextInt()) {
-//                result = sc.nextInt();
-//                sc.nextLine();
-//                while (!sc.hasNextInt()) {
-//                    String input = sc.next();
-//                    System.out.printf("\"%s\" is not a valid number.%n", input);
-//                    result = sc.nextInt();
-//                }
-//                while (result < 0) ;
-//                {
-//                    System.out.printf("\"%s\" is not a valid number.%n", result);
-//                    return result;
-//                }
-//            }
-//        }
-//    }
-
-
-
-
-
-
-//        while (sc.hasNext()) {
-//            if (!sc.hasNextInt()) {
-//                System.out.print("You enter not valid number");
-//                sc.next();
-//            } else if ((sc.nextInt() < 0)) {
-//                System.out.println("Please enter a positive number");
-//                sc.next();
-//            } else {
-//                result = sc.nextInt();
-//                sc.nextLine();
-//                return result;
-//            }
-//        }
-//        return result;
-//    }
 

@@ -11,7 +11,7 @@ public class Homework6 {
         String Team2 = input.nextLine();
 
         int Player1;
-        Player1 = Validator.getInt("Please enter count frags player1 Team 1 ");
+        Player1 = Validator.getInt ("Please enter count frags player1 Team 1 ");
         System.out.println(Player1);
 
         int Player2;
@@ -52,10 +52,10 @@ public class Homework6 {
 
         input.close();
 
-        int Mean1;
-        Mean1 = (Player1 + Player2 + Player3 + Player4 + Player5) / 5;
-        int Mean2;
-        Mean2 = (Player6 + Player7 + Player8 + Player9 + Player10) / 5;
+        double Mean1;
+        Mean1 = (Player1 + Player2 + Player3 + Player4 + Player5) / 5.0;
+        double Mean2;
+        Mean2 = (Player6 + Player7 + Player8 + Player9 + Player10) / 5.0;
 
         System.out.println("arithmetic mean " + Team1 + " = " + Mean1);
         System.out.println("arithmetic mean " + Team2 + " = " + Mean2);
