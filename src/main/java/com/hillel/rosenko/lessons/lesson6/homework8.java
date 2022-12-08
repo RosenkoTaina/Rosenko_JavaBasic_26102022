@@ -21,19 +21,18 @@ public class homework8 {
 
 //       version 2
         System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println("All number of shuttle:");
+        System.out.println("Number of shuttle:");
         for (int i = 1; i <= 100; i++) {
             String str = String.valueOf(i);
             if (str.contains("4") || str.contains("9")) {
-                String str1 = str.replaceAll(String.valueOf(i), " - unlucky shuttle");
-                System.out.println(str + str1);
+                continue;
+//              String str1 = str.replaceAll(String.valueOf(i), " - unlucky shuttle");
+//              System.out.println(str + str1);
             } else {
                 System.out.println(str);
             }
         }
-
+// якшо серединка if закоментована то просто друкує всі номери шатлів без нещасливих ;)
     }
 
 }
