@@ -1,7 +1,7 @@
 package com.hillel.rosenko.lessons.lesson6;
 import java.util.Scanner;
 
-public class homework7 {
+public class Homework7 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class homework7 {
                     if (randomNumber != userData) {
                         System.out.println(" You have attempts: " + (5 - i));
                         if (i == 5) {
-                            System.out.print(" You loose! ");
+                            System.out.print(" You lose! ");
                         }
                     } else {
                         System.out.printf(" You win!!!! Your lucky number %d \n", userData);

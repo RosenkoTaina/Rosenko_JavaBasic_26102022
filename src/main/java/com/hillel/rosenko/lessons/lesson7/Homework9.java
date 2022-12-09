@@ -1,7 +1,7 @@
 package com.hillel.rosenko.lessons.lesson7;
 import java.util.Arrays;
 
-public class homework9 {
+public class Homework9 {
 
     public static void main(String[] args) {
 

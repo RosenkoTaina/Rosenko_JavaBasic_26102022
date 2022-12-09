@@ -17,9 +17,9 @@ public class Validator {
                 } else {
                     System.out.print("Enter number from 1 to 5");
                 }
-            }else {
+            } else {
                 System.out.print("You enter not valid number");
-                }
+            }
             sc.nextLine();
         }
 
