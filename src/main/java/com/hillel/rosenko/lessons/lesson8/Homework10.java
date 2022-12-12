@@ -39,12 +39,10 @@ public class Homework10 {
             } else {
                 System.out.println(counter + " Couple of number is not matched " + temp + " != " + temp2);
             }
-
         }
         System.out.println("Total Matched " + matched);
 
     }
-
 }
 
 
