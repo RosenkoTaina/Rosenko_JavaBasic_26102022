@@ -2,7 +2,7 @@ package com.hillel.rosenko.lessons.lesson11;
 
 import java.util.Scanner;
 
-public class McDonalds {
+public class Homework13 {
     public static void main(String[] args) {
         Burger a = new Burger();
         {

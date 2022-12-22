@@ -19,7 +19,6 @@ public class Burger {
         component[3] = this.greens;
         component[4] = this.mayonnaise;
 
-
         for (String i : component) {
             System.out.println(i);
         }
