@@ -43,9 +43,9 @@ public class Homework11 {
         }
 
         System.out.println("Your matrix BEFORE ");
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + "\t");
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
+                System.out.print(anInt + "\t");
             }
             System.out.println();
         }
