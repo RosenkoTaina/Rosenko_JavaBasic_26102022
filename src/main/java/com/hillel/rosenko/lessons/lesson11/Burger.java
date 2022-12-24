@@ -4,23 +4,51 @@ public class Burger {
     String name;
     String bun;
     String meat;
+
+    boolean ExtraMeat;
     String cheese;
     String greens;
     String mayonnaise;
 
-    public Burger(String name, String bun, String meat, String cheese, String greens, String mayonnaise) {
+    public Burger() {
+        this.name = "Original";
+        this.bun = "bun";
+        this.meat = "meet";
+        this.cheese = "cheese";
+        this.greens = "greens";
+        this.mayonnaise = "mayonnaise";
+        BurgerInfo();
+        setComponents();
+    }
+
+    public Burger(String name) {
         this.name = name;
-        this.bun = bun;
-        this.meat = meat;
-        this.cheese = cheese;
-        this.greens = greens;
-        this.mayonnaise = mayonnaise;
+        this.bun = "bun";
+        this.meat = "meet";
+        this.cheese = "cheese";
+        this.greens = "greens";
+        this.mayonnaise = "";
+        BurgerInfo();
+        setComponents();
+    }
+
+    public Burger(String name, boolean ExtraMeat) {
+        this.name = name;
+        this.bun = "bun";
+        this.meat = "2x meet";
+        this.cheese = "cheese";
+        this.greens = "greens";
+        this.mayonnaise = "mayonnaise";
+        BurgerInfo();
+        setComponents();
     }
 
     void BurgerInfo() {
         System.out.println(this.name + " burger");
     }
-        void setComponents() {
+
+
+    void setComponents() {
         String[] component = new String[5];
         component[0] = this.bun;
         component[1] = this.meat;
@@ -29,9 +57,13 @@ public class Burger {
         component[4] = this.mayonnaise;
 
         for (String i : component) {
-            System.out.println(i);
+            if (i.equals(component[4]) && i.equals("")) {
+                System.out.print("\n");
+            } else if (i.equals(component[4]) && !i.equals("")) {
+                System.out.println(i + "\n");
+            } else if (!i.equals(component[4]) && !i.equals("")) {
+                System.out.println(i);
+            }
         }
     }
-
-
 }
