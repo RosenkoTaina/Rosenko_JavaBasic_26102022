@@ -8,6 +8,15 @@ public class Burger {
     String greens;
     String mayonnaise;
 
+    public Burger(String name, String bun, String meat, String cheese, String greens, String mayonnaise) {
+        this.name = name;
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.greens = greens;
+        this.mayonnaise = mayonnaise;
+    }
+
     void BurgerInfo() {
         System.out.println(this.name + " burger");
     }

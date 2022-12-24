@@ -4,36 +4,10 @@ import java.util.Scanner;
 
 public class Homework13 {
     public static void main(String[] args) {
-        Burger a = new Burger();
-        {
-            a.name = "Original";
-            a.bun = "bun";
-            a.meat = "meet";
-            a.cheese = "cheese";
-            a.greens = "greens";
-            a.mayonnaise = "mayonnaise";
+        Burger a = new Burger("Ben Aflek", "bun", "meat","cheese","greens","mayonnaise");
+        Burger b = new Burger("Diet", "bun", "meat", "cheese", "greens", "");
+        Burger c = new Burger("Double meat", "bun", "2x meat", "cheese", "greens", "mayonnaise");
 
-        }
-        Burger b = new Burger();
-        {
-            b.name = "Diet";
-            b.bun = "bun";
-            b.meat = "meet";
-            b.cheese = "cheese";
-            b.greens = "greens";
-            b.mayonnaise = "";
-
-        }
-        Burger c = new Burger();
-        {
-            c.name = "Double meet";
-            c.bun = "bun";
-            c.meat = "2x meet";
-            c.cheese = "cheese";
-            c.greens = "greens";
-            c.mayonnaise = "mayonnaise";
-
-        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -41,7 +15,7 @@ public class Homework13 {
                 Hello! Menu:\s
                 1 - Original burger\s
                 2 - Diet burger\s
-                3 - Double meet\s
+                3 - Double meat\s
                 You can enter number of burger that you want!""");
 
 
