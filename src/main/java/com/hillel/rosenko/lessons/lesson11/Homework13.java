@@ -15,7 +15,6 @@ public class Homework13 {
         Burger c = new Burger("Double meat", true);
         System.out.println ("Please enter the number of burger that you want!");
 
-
              while (scanner.hasNextInt()) {
                int burgerNumber = scanner.nextInt();
                 if (burgerNumber == 1) {

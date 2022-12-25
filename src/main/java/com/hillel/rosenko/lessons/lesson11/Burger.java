@@ -56,14 +56,19 @@ public class Burger {
         component[3] = this.greens;
         component[4] = this.mayonnaise;
 
+        int k = 0;
         for (String i : component) {
-            if (i.equals(component[4]) && i.equals("")) {
-                System.out.print("\n");
-            } else if (i.equals(component[4]) && !i.equals("")) {
-                System.out.println(i + "\n");
-            } else if (!i.equals(component[4]) && !i.equals("")) {
+            if (i.equals("")) {
+               continue;
+            } else if (k < component.length) {
                 System.out.println(i);
+            } else {
+                break;
             }
-        }
+            k++;
+            }
+        System.out.println();
     }
+
 }
+
