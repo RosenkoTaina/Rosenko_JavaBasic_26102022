@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Android android = new Android("pixel","6");
         Iphone iphone = new Iphone("iphone", "13");
-
         android.info();
         iphone.info();
     }
