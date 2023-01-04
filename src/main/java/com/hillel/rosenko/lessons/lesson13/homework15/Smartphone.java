@@ -8,7 +8,6 @@ public abstract class Smartphone implements Smartphones, OS {
     public Smartphone(String name, String model) {
         this.name = name;
         this.model = model;
-
     }
 
     public String getName() {
@@ -19,12 +18,12 @@ public abstract class Smartphone implements Smartphones, OS {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public Smartphone(int os) {
+        this.os = os;
     }
 
     public void info() {
-        System.out.println("Phone info : " + name + " " + model);
+        System.out.println("Phone info : " + getName() + " " + getModel());
         printOS(os);
         call();
         sms();
