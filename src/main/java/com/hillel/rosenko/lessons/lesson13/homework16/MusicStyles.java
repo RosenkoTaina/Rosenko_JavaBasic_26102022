@@ -3,7 +3,7 @@ package com.hillel.rosenko.lessons.lesson13.homework16;
 public class MusicStyles {
 
     private String name;
-    private String artist;
+   private final String artist;
 
     public MusicStyles(String name, String artist) {
         this.name = name;
@@ -11,10 +11,14 @@ public class MusicStyles {
     }
 
     public void playMusic() {
-        System.out.println(this.getArtist() + " starts playing " + this.getName());
+        System.out.println(getArtist() + " starts playing " + getName());
     }
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getArtist() {

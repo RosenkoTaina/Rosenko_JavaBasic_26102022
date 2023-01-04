@@ -11,10 +11,9 @@ public class Main {
 
         for (MusicStyles MusicStyles : musicStyles) {
             MusicStyles.playMusic();
-            
+
         }
 
     }
-
 
 }
