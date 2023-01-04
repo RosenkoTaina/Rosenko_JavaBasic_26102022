@@ -6,6 +6,6 @@ public class RockMusic extends MusicStyles {
     }
     @Override
     public void playMusic() {
-        System.out.println(this.getArtist() + " starts playing Rock Music");
+        System.out.println(this.getArtist() + " starts playing Rock Music ");
     }
 }

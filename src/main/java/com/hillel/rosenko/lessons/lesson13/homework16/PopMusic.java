@@ -9,5 +9,4 @@ public class PopMusic extends MusicStyles {
     public void playMusic() {
         System.out.println(this.getArtist() + " starts playing Pop Music");
     }
-
 }
