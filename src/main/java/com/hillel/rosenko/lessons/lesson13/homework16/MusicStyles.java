@@ -1,22 +1,24 @@
 package com.hillel.rosenko.lessons.lesson13.homework16;
 
 public class MusicStyles {
+
     private String name;
-    private String bandName;
+    private String artist;
 
-    public MusicStyles(String name) {
+    public MusicStyles(String name, String artist) {
         this.name = name;
-        this.bandName = bandName;
+        this.artist = artist;
     }
-    public void playMusic() {
-        System.out.println();
 
+    public void playMusic() {
+        System.out.println(this.getArtist() + " starts playing " + this.getName());
     }
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getArtist() {
+        return artist;
     }
+
 }

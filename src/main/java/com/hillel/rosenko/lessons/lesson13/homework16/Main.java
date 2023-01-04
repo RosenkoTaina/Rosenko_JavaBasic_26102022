@@ -3,17 +3,16 @@ package com.hillel.rosenko.lessons.lesson13.homework16;
 public class Main {
     public static void main(String[] args) {
 
-       MusicStyles[] musicStyles = {new ClassicMusic("Classic Music"), new PopMusic("Pop Music"),
-               new RockMusic("Rock Music")};
+       MusicStyles[] musicStyles = {
+               new ClassicMusic("Classic Music", "Mozart"),
+               new PopMusic("Pop Music", "Lady Gaga"),
+               new RockMusic("Rock Music", "Scorpions")
+       };
 
-Band [] bands = {
-        new ClassicMusic ("Mozart");
-        new PopMusic("Lady Gaga");
-        new RockMusic("Scorpions");
-
-
-
-
+        for (MusicStyles MusicStyles : musicStyles) {
+            MusicStyles.playMusic();
+            
+        }
 
     }
 
