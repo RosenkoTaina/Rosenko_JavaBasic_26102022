@@ -18,10 +18,6 @@ public abstract class Smartphone implements Smartphones, OS {
         return model;
     }
 
-    public Smartphone(int os) {
-        this.os = os;
-    }
-
     public void info() {
         System.out.println("Phone info : " + getName() + " " + getModel());
         printOS(os);
@@ -29,6 +25,19 @@ public abstract class Smartphone implements Smartphones, OS {
         sms();
         internet();
     }
+    public void printOS(int os) {
+        switch (os) {
+            case 0:
+                System.out.println("LinuxOS");
+                break;
+            case 1:
+                System.out.println("iOS");
+                break;
+            default:
+                System.out.println("operating system");
+        }
+    }
+
     public void call() {
         System.out.println("call");
     }
