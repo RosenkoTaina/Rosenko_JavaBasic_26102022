@@ -11,13 +11,14 @@ public class Homework17 {
     }
 
 
-    public static void runApp() throws IllegalStateException {
+    public static void runApp()  {
 
         Scanner scanner = new Scanner(System.in);
         DrinksMachine[] drinksMachines = DrinksMachine.values();
 
         DrinksMachine userDrinkType = null;
         System.out.println("Please enter drinks: " + Arrays.toString(drinksMachines));
+        System.out.println("Please enter \\exit\\ to END");
 
         double price = 0;
         boolean stop = false;
@@ -30,13 +31,12 @@ public class Homework17 {
                     for (DrinksMachine drinksMachine : drinksMachines) {
                         if (drinksMachine.toString().equals(userValue)) {
                             userDrinkType = DrinksMachine.valueOf(userValue);
+                            break;
                         } else if (userValue.equals("EXIT")) {
                             System.out.println("count drinks: " + Counter.getCounter());
                             System.out.println("Total: " + price);
                             stop = true;
-                            break;
-                        } else if (userDrinkType == null){
-                            System.out.println("Unexpected value ___: " );
+                            scanner.close();
                             break;
                         }
                     }
@@ -84,6 +84,9 @@ public class Homework17 {
                         default:
                             throw new IllegalArgumentException("Invalid operation");
                     }
+                } else { System.out.println("Invalid operation");
+                   return;
+
                 }
 
             } catch (IllegalArgumentException e) {
