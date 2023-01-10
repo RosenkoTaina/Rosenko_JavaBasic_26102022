@@ -6,8 +6,7 @@ public enum DrinksMachine {
     LEMONADE("lemonade", Drinks.LEMONADE),
     MOJITO("mojito", Drinks.MOJITO),
     MINERAL_WATER("mineral water", Drinks.MINERAL_WATER),
-    COCA_COLA("coca-cola", Drinks.COCA_COLA),
-    STOP("stop", 0);
+    COCA_COLA("coca-cola", Drinks.COCA_COLA);
     private final String drink;
     private double cost;
     DrinksMachine(String drink, double cost){
