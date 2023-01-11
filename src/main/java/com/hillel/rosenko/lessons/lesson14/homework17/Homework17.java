@@ -82,9 +82,11 @@ public class Homework17 {
                             price += DrinksMachine.COCA_COLA.getCost();
                             break;
                         }
+                        default:
+                            System.out.println ("Unexpected value: " + userDrinkType);
                     }
                 } else {
-                    System.out.println("Invalid operation else");
+                    System.out.println("Invalid operation");
 
                 }
 
