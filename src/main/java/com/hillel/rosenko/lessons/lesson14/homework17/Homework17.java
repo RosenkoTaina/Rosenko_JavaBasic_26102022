@@ -21,8 +21,8 @@ public class Homework17 {
             System.out.println("Please enter \\exit\\ to END");
 
             double price = 0;
-            boolean stop = false;
-            while (!stop) {
+
+            while (true) {
                 if (scanner.hasNextLine()) {
                     String userValue = String.valueOf(scanner.nextLine());
                     userValue = userValue.toUpperCase();
@@ -34,7 +34,6 @@ public class Homework17 {
                         } else if (userValue.equals("EXIT")) {
                             System.out.println("Drinks count: " + Counter.getCounter());
                             System.out.println("Total: " + price);
-                            stop = true;
                             scanner.close();
                             return;
                         } else if (!drinksMachine.toString().equals(userValue)) {
@@ -83,8 +82,6 @@ public class Homework17 {
                             price += DrinksMachine.COCA_COLA.getCost();
                             break;
                         }
-                        default:
-                            throw new IllegalArgumentException("Invalid operation default");
                     }
                 } else {
                     System.out.println("Invalid operation else");
