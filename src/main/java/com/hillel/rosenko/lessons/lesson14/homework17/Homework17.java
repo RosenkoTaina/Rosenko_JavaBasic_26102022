@@ -11,19 +11,18 @@ public class Homework17 {
     }
 
 
-    public static void runApp()  {
+    public static void runApp() {
 
-        Scanner scanner = new Scanner(System.in);
-        DrinksMachine[] drinksMachines = DrinksMachine.values();
+        try (Scanner scanner = new Scanner(System.in)) {
+            DrinksMachine[] drinksMachines = DrinksMachine.values();
 
-        DrinksMachine userDrinkType = null;
-        System.out.println("Please enter drinks: " + Arrays.toString(drinksMachines));
-        System.out.println("Please enter \\exit\\ to END");
+            DrinksMachine userDrinkType = null;
+            System.out.println("Please enter drinks: " + Arrays.toString(drinksMachines));
+            System.out.println("Please enter \\exit\\ to END");
 
-        double price = 0;
-        boolean stop = false;
-        while (!stop) {
-            try {
+            double price = 0;
+            boolean stop = false;
+            while (!stop) {
                 if (scanner.hasNextLine()) {
                     String userValue = String.valueOf(scanner.nextLine());
                     userValue = userValue.toUpperCase();
@@ -33,11 +32,14 @@ public class Homework17 {
                             userDrinkType = DrinksMachine.valueOf(userValue);
                             break;
                         } else if (userValue.equals("EXIT")) {
-                            System.out.println("count drinks: " + Counter.getCounter());
+                            System.out.println("Drinks count: " + Counter.getCounter());
                             System.out.println("Total: " + price);
                             stop = true;
                             scanner.close();
-                            break;
+                            return;
+                        } else if (!drinksMachine.toString().equals(userValue)) {
+                            userDrinkType = null;
+
                         }
                     }
                 }
@@ -46,56 +48,53 @@ public class Homework17 {
                     switch (userDrinkType) {
                         case COFFEE: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.COFFEE.getDrink());
+                            System.out.println("1 " + DrinksMachine.COFFEE.getDrink() + " added to your order");
                             price += DrinksMachine.COFFEE.getCost();
                             break;
                         }
                         case TEA: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.TEA.getDrink());
+                            System.out.println("1 " + DrinksMachine.TEA.getDrink() + " added to your order");
                             price += DrinksMachine.TEA.getCost();
                             break;
                         }
                         case LEMONADE: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.LEMONADE.getDrink());
+                            System.out.println("1 " + DrinksMachine.LEMONADE.getDrink() + " added to your order");
                             price += DrinksMachine.LEMONADE.getCost();
                             break;
                         }
 
                         case MOJITO: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.MOJITO.getDrink());
+                            System.out.println("1 " + DrinksMachine.MOJITO.getDrink() + " added to your order");
                             price += DrinksMachine.MOJITO.getCost();
                             break;
                         }
                         case MINERAL_WATER: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.MINERAL_WATER.getDrink());
+                            System.out.println("1 " + DrinksMachine.MINERAL_WATER.getDrink() + " added to your order");
                             price += DrinksMachine.MINERAL_WATER.getCost();
                             break;
                         }
                         case COCA_COLA: {
                             new Counter();
-                            System.out.println("Your order " + DrinksMachine.COCA_COLA.getDrink());
+                            System.out.println("1 " + DrinksMachine.COCA_COLA.getDrink() + " added to your order");
                             price += DrinksMachine.COCA_COLA.getCost();
                             break;
                         }
                         default:
-                            throw new IllegalArgumentException("Invalid operation");
+                            throw new IllegalArgumentException("Invalid operation default");
                     }
-                } else { System.out.println("Invalid operation");
-                   return;
+                } else {
+                    System.out.println("Invalid operation else");
 
                 }
 
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
             }
         }
     }
 }
-
 
 
 
