@@ -3,11 +3,10 @@ package com.hillel.rosenko.lessons.lesson14.homework17;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class Homework17 {
     public static void main(String[] args) {
-
         runApp();
-
     }
 
 
@@ -20,7 +19,7 @@ public class Homework17 {
             System.out.println("Please enter drinks: " + Arrays.toString(drinksMachines));
             System.out.println("Please enter \\exit\\ to END");
 
-            double price = 0;
+
 
             while (true) {
                 if (scanner.hasNextLine()) {
@@ -33,7 +32,7 @@ public class Homework17 {
                             break;
                         } else if (userValue.equals("EXIT")) {
                             System.out.println("Drinks count: " + Counter.getCounter());
-                            System.out.println("Total: " + price);
+                            System.out.println("Total: " + Total.getTotal());
                             scanner.close();
                             return;
                         } else if (!drinksMachine.toString().equals(userValue)) {
@@ -47,39 +46,50 @@ public class Homework17 {
                     switch (userDrinkType) {
                         case COFFEE: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.COFFEE.getDrink() + " added to your order");
-                            price += DrinksMachine.COFFEE.getCost();
+                            System.out.println("1 " + DrinksMachine.COFFEE.getDrink() + " added to your order ");
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(Drinks.COFFEE);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case TEA: {
                             new Counter();
                             System.out.println("1 " + DrinksMachine.TEA.getDrink() + " added to your order");
-                            price += DrinksMachine.TEA.getCost();
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(Drinks.TEA);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case LEMONADE: {
                             new Counter();
                             System.out.println("1 " + DrinksMachine.LEMONADE.getDrink() + " added to your order");
-                            price += DrinksMachine.LEMONADE.getCost();
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(Drinks.LEMONADE);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
 
                         case MOJITO: {
                             new Counter();
                             System.out.println("1 " + DrinksMachine.MOJITO.getDrink() + " added to your order");
-                            price += DrinksMachine.MOJITO.getCost();
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(Drinks.MOJITO);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case MINERAL_WATER: {
                             new Counter();
                             System.out.println("1 " + DrinksMachine.MINERAL_WATER.getDrink() + " added to your order");
-                            price += DrinksMachine.MINERAL_WATER.getCost();
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(Drinks.MINERAL_WATER);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case COCA_COLA: {
                             new Counter();
                             System.out.println("1 " + DrinksMachine.COCA_COLA.getDrink() + " added to your order");
-                            price += DrinksMachine.COCA_COLA.getCost();
+                            Total.setTotal(Drinks.COCA_COLA);
+                            System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         default:
