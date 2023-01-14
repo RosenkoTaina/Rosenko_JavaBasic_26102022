@@ -46,49 +46,50 @@ public class Homework17 {
                     switch (userDrinkType) {
                         case COFFEE: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.COFFEE.getDrink() + " added to your order ");
+                            System.out.println("1 " + DrinksMachine.COFFEE.name + " added to your order ");
                             DrinkMaker.makeDrink(userDrinkType);
-                            Total.setTotal(Drinks.COFFEE);
+                            Total.setTotal(DrinksMachine.COFFEE.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case TEA: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.TEA.getDrink() + " added to your order");
+                            System.out.println("1 " + DrinksMachine.TEA.name + " added to your order ");
                             DrinkMaker.makeDrink(userDrinkType);
-                            Total.setTotal(Drinks.TEA);
+                            Total.setTotal(DrinksMachine.TEA.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case LEMONADE: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.LEMONADE.getDrink() + " added to your order");
+                            System.out.println("1 " + DrinksMachine.LEMONADE.name + " added to your order ");
                             DrinkMaker.makeDrink(userDrinkType);
-                            Total.setTotal(Drinks.LEMONADE);
+                            Total.setTotal(DrinksMachine.LEMONADE.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
 
                         case MOJITO: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.MOJITO.getDrink() + " added to your order");
+                            System.out.println("1 " + DrinksMachine.MOJITO.name + " added to your order ");
                             DrinkMaker.makeDrink(userDrinkType);
-                            Total.setTotal(Drinks.MOJITO);
+                            Total.setTotal(DrinksMachine.MOJITO.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case MINERAL_WATER: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.MINERAL_WATER.getDrink() + " added to your order");
+                            System.out.println("1 " + DrinksMachine.MINERAL_WATER.name + " added to your order ");
                             DrinkMaker.makeDrink(userDrinkType);
-                            Total.setTotal(Drinks.MINERAL_WATER);
+                            Total.setTotal(DrinksMachine.MINERAL_WATER.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }
                         case COCA_COLA: {
                             new Counter();
-                            System.out.println("1 " + DrinksMachine.COCA_COLA.getDrink() + " added to your order");
-                            Total.setTotal(Drinks.COCA_COLA);
+                            System.out.println("1 " + DrinksMachine.COCA_COLA.name + " added to your order ");
+                            DrinkMaker.makeDrink(userDrinkType);
+                            Total.setTotal(DrinksMachine.COCA_COLA.cost);
                             System.out.println("Total: "  + Total.getTotal());
                             break;
                         }

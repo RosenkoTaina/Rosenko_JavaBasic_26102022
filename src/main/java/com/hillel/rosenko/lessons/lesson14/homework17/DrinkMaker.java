@@ -4,5 +4,7 @@ public class DrinkMaker {
 
     public static void makeDrink(DrinksMachine drink) {
         System.out.println("Your " + drink.toString() + " order is being prepared");
+
+
     }
 }
