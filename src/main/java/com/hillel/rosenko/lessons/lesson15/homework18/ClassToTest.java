@@ -7,23 +7,29 @@ public class ClassToTest {
 		getAverage(MatrixToTest);
 	}
 
+
 	public static int squareMatrix(int[][] matrixToTest) {
 		try {
 			int matrixRowLength = matrixToTest.length;
 			int matrixColLength = matrixToTest[0].length;
 
 			if (matrixRowLength != matrixColLength) {
-				return 1; //Matrix is not square
+        return 1; //Matrix is not square
+//				System.out.println("Matrix is not square");
 			} else if (matrixRowLength == matrixColLength) {
-				return 2; //Matrix is square
+        return 2; //Matrix is square
+//				System.out.println("Matrix is square");
 			}
 		} catch (NullPointerException e) {
-			return -1; //Matrix is null
+      return -1; //Matrix is null
+//			System.out.println("Matrix is null");
 		} catch (ArrayIndexOutOfBoundsException e) {
-			return -2; //Matrix is empty
+      return -2; //Matrix is empty
+//			System.out.println("Matrix is empty");
 		}
 		return 0;
 	}
+
 
 	public static void getAverage(int[][] matrixToTest) {
 		int counter = 0;
