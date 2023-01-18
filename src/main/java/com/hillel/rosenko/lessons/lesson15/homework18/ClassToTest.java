@@ -7,43 +7,39 @@ public class ClassToTest {
 		getAverage(MatrixToTest);
 	}
 
-
-	public static int squareMatrix(int[][] matrixToTest) {
-		try {
-			int matrixRowLength = matrixToTest.length;
-			int matrixColLength = matrixToTest[0].length;
-
-			if (matrixRowLength != matrixColLength) {
-        return 1; //Matrix is not square
-//				System.out.println("Matrix is not square");
-			} else if (matrixRowLength == matrixColLength) {
-        return 2; //Matrix is square
-//				System.out.println("Matrix is square");
+		public static int squareMatrix(int[][] matrixToTest) {
+			try {
+				int matrixRowLength = matrixToTest.length;
+				int matrixColLength = matrixToTest[0].length;
+				if (matrixRowLength != matrixColLength && matrixRowLength > 1) {
+					return 1; // Matrix is not square
+				} else if (matrixRowLength == matrixColLength && matrixRowLength > 1) {
+					return 2; // Matrix is square
+				} else if (matrixRowLength != matrixColLength && matrixRowLength < 2
+						|| matrixRowLength == matrixColLength && matrixRowLength < 2) {
+					return 3; // Matrix is actually Vector Row
+				}
+			} catch (NullPointerException e) {
+				return -1; // Matrix is null
+			} catch (ArrayIndexOutOfBoundsException e) {
+				return -2; // Matrix is empty
 			}
-		} catch (NullPointerException e) {
-      return -1; //Matrix is null
-//			System.out.println("Matrix is null");
-		} catch (ArrayIndexOutOfBoundsException e) {
-      return -2; //Matrix is empty
-//			System.out.println("Matrix is empty");
+			return 0;
 		}
-		return 0;
-	}
 
-
-	public static void getAverage(int[][] matrixToTest) {
-		int counter = 0;
-		double sum = 0;
-		for (int i = 0; i < matrixToTest.length; i++) {
-			for (int j = 0; j < matrixToTest[i].length; j++) {
-				sum = sum + matrixToTest[i][j];
-				counter++;
+		public static void getAverage(int[][] matrixToTest) {
+			int counter = 0;
+			double sum = 0;
+			for (int i = 0; i < matrixToTest.length; i++) {
+				for (int j = 0; j < matrixToTest[i].length; j++) {
+					sum = sum + matrixToTest[i][j];
+					counter++;
+				}
 			}
+			System.out.println(sum / counter);
+			;
+
 		}
-		System.out.println(sum / counter);
-
-
-	}
 
 }
 
