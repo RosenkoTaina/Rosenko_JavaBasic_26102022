@@ -3,7 +3,7 @@ package com.hillel.rosenko.lessons.lesson10;
 public class Task1 {
     public static void main(String[] args) {
         int value;
-        value = euclideanRecursion(60, 48);
+        value = euclideanRecursion(1256, 2244);
         System.out.println(value);
     }
 
@@ -18,4 +18,5 @@ public class Task1 {
 
     }
 }
+
 

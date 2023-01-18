@@ -1,11 +1,9 @@
 package com.hillel.rosenko.lessons.lesson8;
-
 import java.util.Arrays;
 
 
 public class Homework10 {
     public static void main(String[] args) {
-
 
         int[] array1 = new int[7];
         for (int i = 0; i < array1.length; i++) {

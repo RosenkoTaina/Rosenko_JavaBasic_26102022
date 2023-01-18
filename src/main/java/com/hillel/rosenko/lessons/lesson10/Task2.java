@@ -4,7 +4,7 @@ public class Task2 {
 
     public static void main(String[] args) {
         int value;
-        value = ackRecursion(2, 4);
+        value = ackRecursion(3,12);
         System.out.println(value);
     }
 
